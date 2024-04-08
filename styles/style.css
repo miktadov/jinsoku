@@ -1,0 +1,393 @@
+@import url(./var.css);
+@import url(./fonts.css);
+
+
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style: none;
+}
+
+body {
+   background-color: var(--color-bg);
+   font-family: var(--family-ral);
+   color: white;
+}
+
+h3 {
+   font-size: clamp(16px, 5vw, 24px);
+   letter-spacing: -1px;
+   margin-bottom: 25px;
+}
+
+.container {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   background-image: url(https://sportishka.com/uploads/posts/2022-11/1667506297_5-sportishka-com-p-sportivnii-ford-mustang-krasivo-7.jpg);
+   background-size: cover;
+
+}
+
+.container::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(23, 23, 23, 0.7);
+}
+
+
+
+
+
+.container_main {
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   max-width: 1200px;
+   width: 100%;
+   position: absolute;
+   color: #f1f1f1;
+   width: 100%;
+   inset: 0;
+   margin: 0 auto;
+}
+
+.main__info {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+
+}
+
+.btn {
+   margin: 0 auto;
+   padding: 10px 18px;
+   border-radius: 30px;
+   cursor: pointer;
+   border: none;
+   font-size: clamp(13px, 4vw, 20px);
+   transition: background-color 0.2s ease;
+   font-weight: 600;
+   letter-spacing: 1.5px;
+   text-transform: uppercase;
+}
+
+.btn:hover {
+   background-color: rgb(208, 208, 208);
+}
+
+.main__title {
+   font-size: clamp(40px, 10vw, 90px);
+   font-weight: 900;
+   letter-spacing: 2px;
+   font-family: var(--family-mon);
+}
+
+.main__info img {
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: 2;
+}
+
+.main__sub-title {
+   max-width: 400px;
+   font-weight: 600;
+   margin: 10px auto 30px;
+   font-size: clamp(13px, 4vw, 20px);
+}
+
+/* main */
+
+
+.wrapper {
+   padding: 50px 0;
+}
+
+
+.wrapper__main {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: minmax(200px, auto);
+   gap: 10px;
+}
+
+.card1 {
+   position: relative;
+   overflow: hidden;
+   grid-column: 1/3;
+   grid-row: 1/4;
+
+}
+
+.card2 {
+   grid-column: 3/4;
+   grid-row: 1/3;
+}
+
+
+.card3 {
+   grid-column: 3/4;
+   grid-row: 3/5;
+   background-image: url(http://autotuni.ru/uploads/posts/2015-10/1446149223_roush-4.jpg);
+   background-size: cover;
+   background-position: right;
+}
+
+#Video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.card4 {
+   background-image: url(https://aprperformance.com/wp-content/uploads/2014/08/IMG_3847-copy.jpg);
+   background-size: cover;
+   background-position: right;
+}
+
+.card5 {}
+
+.card6 {
+   text-align: center;
+   grid-column: 1/4;
+   grid-row: 5/6;
+   padding: 50px 0;
+}
+
+.card6 h2 {
+   margin-bottom: 20px;
+}
+
+.card2,
+.card5 {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+}
+
+
+.footer__container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 50px;
+   padding: 50px 0;
+}
+
+.footer__block {
+   display: flex;
+   align-items: start;
+   justify-content: center;
+   flex-direction: column;
+
+}
+.footer__map div{
+   width: 550px;
+}
+
+.footer__block a {
+   color: white;
+   display: flex;
+   text-decoration: none;
+   align-items: center;
+   margin: 6px 0;
+
+}
+
+.footer__block h4 {
+   text-decoration: underline;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 20px;
+   letter-spacing: 2px;
+}
+
+svg {
+   margin-right: 8px;
+}
+
+
+/* Стили для модального окна */
+/* Стили для модального окна */
+.modal-overlay {
+   display: none;
+   position: fixed;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.7);
+   align-items: center;
+   justify-content: center;
+   z-index: 10;
+}
+
+.modal {
+   background: #fff;
+   color: #1c1c1c;;
+   border-radius: 8px;
+   padding: 20px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   width: 90%;
+   max-width: 400px;
+   animation: modalFade 0.5s;
+}
+
+.modal-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.modal-title {
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.close-modal {
+   cursor: pointer;
+   font-size: 24px;
+}
+
+
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+   width: 100%;
+   padding: 10px;
+   border: 2px solid  #1c1c1c;
+   border-radius: 5px;
+   box-sizing: border-box;
+}
+
+.submit-btn {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   background-color: #1c1c1c;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+.submit-btn:hover {
+   transition: all 0.5s;
+   background-color: #3b3b3b;
+}
+
+
+/* Анимация появления */
+@keyframes modalFade {
+   from {
+      transform: translateZ(-100%);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0);
+      opacity: 1;
+   }
+}
+
+
+
+@media (max-width: 768px) {
+   .container {
+      height: 300px;
+   }
+
+   .main__sub-title {
+      max-width: 350px;
+      margin: 15px auto 30px;
+      letter-spacing: 0px;
+   }
+
+   .wrapper__main {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      padding: 0 10px;
+   }
+
+
+   .card1 {
+      min-height: 350px;
+      grid-column: 1/4;
+      grid-row: 1/2;
+      padding: 0;
+   }
+   h3{
+      margin: 0;
+   }
+
+   .card2 {
+
+      grid-column: 1/4;
+      grid-row: 2/3;
+   }
+
+   .card3 {
+      padding: 0;
+      grid-column: 1/4;
+      grid-row: 3/4;
+   }
+
+   .card4 {
+
+      grid-column: 1/4;
+      grid-row: 4/5;
+   }
+
+   .card5 {
+      padding: 0;
+      grid-column: 1/4;
+      grid-row: 5/6;
+   }
+
+   .card6 {
+      padding: 0;
+      grid-column: 1/4;
+      grid-row: 6/7;
+   }
+
+
+   .footer__container {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 10px 0;
+
+   }
+
+   .footer__block {
+      display: flex;
+      align-items: center
+   }
+
+}
+
