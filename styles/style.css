@@ -184,6 +184,7 @@ p {
    background-image: url(../images/1.jpg);
    background-size: cover;
    background-position: right;
+   filter: grayscale(80%);
 }
 
 #Video {
@@ -199,6 +200,7 @@ p {
    background-image: url(../images/2.jpg);
    background-size: cover;
    background-position: right;
+   filter: grayscale(80%);
 }
 
 .card6 {
