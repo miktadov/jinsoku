@@ -418,6 +418,10 @@ svg {
       grid-column: 1/4;
       grid-row: 6/7;
    }
+   
+   .text-block {
+      padding: 0;
+   }
 
    .wrapper {
       /* padding-top: 0; */
